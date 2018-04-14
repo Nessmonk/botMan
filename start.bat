@@ -1,2 +1,1 @@
 nodemon bot.js
-pause
