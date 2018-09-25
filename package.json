@@ -1,6 +1,6 @@
 {
   "name": "discordshitbot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Discord bot",
   "main": "bot.js",
   "scripts": {
@@ -9,7 +9,8 @@
   "author": "Nessmonk",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.2.1",
-    "discord.js-commando": "^0.9.0"
+    "discord.js": "^11.4.1",
+    "discord.js-commando": "^0.9.0",
+    "nodemon": "ˆ1.18.4"
   }
 }
