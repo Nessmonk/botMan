@@ -6,9 +6,9 @@
 	"author": "Nessmonk",
 	"license": "ISC”,
  	"dependencies": {
-  		"discord.js": "^11.4.1",
-  		"discord.js-commando": "^0.9.0",
-  		"nodemon": "ˆ1.18.4"
+		"discord.js": “~11.4.1",
+  		"discord.js-commando": “~0.9.0",
+  		"nodemon": “~1.18.4"
 	},
    	“scripts” : {
 		“start”: “nodemon bot.js"
