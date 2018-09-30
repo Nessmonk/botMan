@@ -1,20 +1,22 @@
 {
-"name": "discordshitbot”,
-"version": "1.1.0”,
-"description": "Discord bot”,
-"main": "bot.js”,
-"author": "Nessmonk",
-"license": "ISC”,
-"dependencies": {
-   "discord.js": “~11.4.1",
-   "discord.js-commando": “~0.9.0",
-   "nodemon": “~1.18.4"
-},
-"scripts” : {
-   "start”: “nodemon bot.js"
- },
-"repository”: {
-  "type” : “git”,
-  "url” : “https://github.com/Nessmonk/botMan"
- }
+  "name": "discordshitbot",
+  "version": "1.0.6",
+  "description": "Discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "nodemon bot.js"
+  },
+  "author": "Nessmonk",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "~0.9.0",
+    "google-url": "0.0.4",
+    "node-url-shortener": "^1.0.1",
+    "nodemon": "~1.18.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nessmonk/botMan"
+  }
 }
