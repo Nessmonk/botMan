@@ -3,6 +3,7 @@
 ## Simple bot made by Nessmonk#7550
 Created in Node.JS with Discord.Js, Nodemon and Discord commando.
 Base prefix is ">", you can change that by going into config.json and changing the prefix to anything you want.
+Most commands speak for themselves. Still going to add comments to code for readability.
 
 ## Commands
 
