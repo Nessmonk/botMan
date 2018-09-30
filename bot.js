@@ -11,7 +11,7 @@ const bot = new Discord.Client({
 
 bot.on("ready", async () => {
     //bot.user.setUsername("Botmonk");
-    bot.user.setPresence({ game: { name: '>help for help'} });
+    bot.user.setPresence({ game: { name: '>help for help'} }); /* Sets the game the bot is playing */
     bot.user.setStatus('idle'); /* [online | dnd | idle | invisible] */
     console.log('Bot is ready, and his name is:  ' + bot.user.username + "#" + bot.user.discriminator);
     console.log('Bot id is: ' + bot.user.id)
@@ -126,16 +126,6 @@ bot.on("message", async message => {
     if (command == `${prefix}yeehaw`){
         message.reply('end the pain please :cowboy::gun:')
     }
-
-    bot.on('message', msg => {
-        if (msg.content === 'ping') {
-            msg.reply('pong');
-        }
-
-        if (msg.content === 'help') {
-            msg.channel.send('nah');
-        }
-    });
 });
 
 bot.login(config.token);
