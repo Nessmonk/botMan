@@ -1,10 +1,10 @@
 # botMan
 
-##Simple bot made by Nessmonk#7550
+## Simple bot made by Nessmonk#7550
 Created in Node.JS with Discord.Js, Nodemon and Discord commando.
 Base prefix is ">", you can change that by going into config.json and changing the prefix to anything you want.
 
-##Commands
+## Commands
 
 >help: Simple help command showing all available commands (manually added, no algorithm for whenever I add a command yet.)
 >info: Shows you simple information about yourself (Username, Nickname, Status etc)
