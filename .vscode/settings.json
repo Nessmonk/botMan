@@ -1,3 +1,24 @@
 {
-    "git.ignoreLimitWarning": true
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 13,
+    "emmet.includeLanguages": {
+        "blade": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "workbench.showEditorTabs": true,
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 0,
+    "files.autoSave": "onFocusChange",
+    "workbench.colorTheme": "Material Theme",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "editor.lineHeight": 19,
+    "editor.cursorWidth": 1,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorStyle": "line-thin",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Courier",
+    "editor.suggestLineHeight": 15,
 }
