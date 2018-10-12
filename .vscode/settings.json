@@ -2,14 +2,9 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.minimap.enabled": false,
     "editor.fontSize": 13,
-    "emmet.includeLanguages": {
-        "blade": "html"
-    },
-    "emmet.triggerExpansionOnTab": true,
-    "workbench.showEditorTabs": true,
     "explorer.openEditors.visible": 0,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": true,
     "window.zoomLevel": 0,
     "files.autoSave": "onFocusChange",
     "workbench.colorTheme": "Material Theme",
