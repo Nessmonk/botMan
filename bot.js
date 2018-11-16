@@ -5,7 +5,6 @@ let color = require('./commands/randomColor');
 let eightBall = require('./commands/8ball');
 let coinflip = require('./commands/Flip');
 let tinyurl = require('tinyurl');
-
 const bot = new Discord.Client({
     disableEveryone: true
 });
@@ -131,5 +130,17 @@ bot.on("message", async message => {
         message.reply('end the pain please :cowboy::gun:')
     }
 });
+
+bot.on("message", msg => {
+    let message = msg.content.toLowerCase();
+
+    if (message == 'ping') { 
+        msg.reply('pong'); 
+    } else if (message == 'dirk') {
+        msg.reply('Dirk is stom');
+    } else if (message == 'anime') {
+        msg.reply('https://twist.moe/a/bokunopico/1');
+    }
+}); 
 
 bot.login(config.token);
