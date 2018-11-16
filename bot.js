@@ -9,6 +9,10 @@ const bot = new Discord.Client({
     disableEveryone: true
 });
 
+/**
+ * Logging
+ */
+
 bot.on("ready", async () => {
     //bot.user.setUsername("Botmonk");
     bot.user.setPresence({ game: { name: '>help for help'} }); /* Sets the game the bot is playing */
@@ -22,6 +26,10 @@ bot.on("ready", async () => {
         console.log(e.stack);
     }
 });
+
+/**
+ * Bot Commands
+ */
 
 bot.on("message", async message => {
     if (message.author.bot) return;
@@ -141,6 +149,23 @@ bot.on("message", msg => {
     } else if (message == 'anime') {
         msg.reply('https://twist.moe/a/bokunopico/1');
     }
-}); 
+});
+
+/**
+ * Logging
+ */
+
+bot.on('guildMemberAdd', member => {
+    const channel = member.guild.channels.find(ch => ch.name == 'log');
+    if (!channel) return;
+    channel.send(`Welcome to the server, ${member}`);
+});
+
+bot.on('guildMemberRemove', member => {
+    const channel = member.guild.channels.find(ch => ch.name == 'log');
+    if (!channel) return;
+    channel.send(`Goodbye, ${member}`);
+});
+  
 
 bot.login(config.token);
