@@ -20,4 +20,3 @@ Most commands speak for themselves. Still going to add comments to code for read
 >uptime: Checks the uptime of the bot
 
 >invite: Creates an invite for the bot, could be shortened with goo.gl or bit.ly but cba to get an API key so I can do that.
-
