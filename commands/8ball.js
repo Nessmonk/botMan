@@ -1,4 +1,4 @@
-exports.eightBall = function() {
+function eightBall(message) {
     var randomNumber = Math.floor(Math.random() * 8);
     var answer = '';
     switch (randomNumber) {
@@ -28,5 +28,7 @@ exports.eightBall = function() {
             break;
     }
     console.log('The eight ball answered: ' + answer);
-    return answer;
+    message.reply('The eight ball answered: ' + answer);
 }
+
+module.exports = eightBall;

@@ -1,4 +1,4 @@
-exports.flip = function () {
+function flip(message) {
     var flipNumber = Math.floor(Math.random() * 2);
     var result = '';
     switch(flipNumber) {
@@ -10,5 +10,8 @@ exports.flip = function () {
             break;
     }   
     console.log(result + " has been flipped.")
-    return result;
+
+    message.reply(result)
 }
+
+module.exports = flip;
