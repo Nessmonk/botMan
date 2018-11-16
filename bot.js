@@ -2,6 +2,7 @@ const config = require("./config.json");
 const Discord = require('discord.js');
 const prefix = config.prefix;
 let tinyurl = require('tinyurl');
+let start = require('./app/start');
 let help = require('./commands/help');
 let info = require('./commands/info');
 let eightBall = require('./commands/8ball');
@@ -10,29 +11,12 @@ let diceRoll = require('./commands/dice');
 let color = require('./commands/randomColor');
 let upTime = require('./commands/uptime');
 let replies = require('./commands/replies')
-let logging = require('./commands/logging');
-
+let logging = require('./app/logging');
 const bot = new Discord.Client({
     disableEveryone: true
 });
 
-/**
- * Bot start
- */
-
-bot.on("ready", async () => {
-    //bot.user.setUsername("Botmonk");
-    bot.user.setPresence({ game: { name: '>help for help'} }); /* Sets the game the bot is playing */
-    bot.user.setStatus('idle'); /* [online | dnd | idle | invisible] */
-    console.log('Bot is ready, and his name is:  ' + bot.user.username + "#" + bot.user.discriminator);
-    console.log('Bot id is: ' + bot.user.id)
-    try {
-        let link = await bot.generateInvite(["ADMINISTRATOR"]);
-        console.log('Invite link is: ' + link);
-    } catch (e) {
-        console.log(e.stack);
-    }
-});
+start(bot);
 
 /**
  * Bot Commands
@@ -93,10 +77,6 @@ bot.on("message", async message => {
 });
 
 replies(bot);
-
-/**
- * Logging
- */
 
 logging(bot);
   
