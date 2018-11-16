@@ -4,6 +4,7 @@ const prefix = config.prefix;
 let color = require('./commands/randomColor');
 let eightBall = require('./commands/8ball');
 let coinflip = require('./commands/Flip');
+let tinyurl = require('tinyurl');
 
 const bot = new Discord.Client({
     disableEveryone: true
@@ -25,7 +26,7 @@ bot.on("ready", async () => {
 
 bot.on("message", async message => {
     if (message.author.bot) return;
-    if (message.channel.type === "dm") return;
+    // if (message.channel.type === "dm") return;
 
     let messageArray = message.content.split(" ");
     let command = messageArray[0].toLocaleLowerCase();
@@ -58,16 +59,16 @@ bot.on("message", async message => {
 
     //INFO
     if (command == `${prefix}info`) {
-        let dr = message.author.createdAt;
-        let dj = message.member.joinedAt;
-        let embed = new Discord.RichEmbed()
+        let ca = message.author.createdAt;
+        let ja = message.member.joinedAt;
 
+        let embed = new Discord.RichEmbed()
             .setColor(color.randomColor())
             .setAuthor(message.author.username + "#" + message.author.discriminator, message.author.avatarURL)
             .addField("Username", message.author.username, true)
-            .addField("Registered", dr.toDateString(), true)
+            .addField("Registered", ca.toDateString(), true)
             .addField("Nickname", message.member.displayName, true)
-            .addField("Joined at", dj.toDateString(), true)
+            .addField("Joined at", ja.toDateString(), true)
             .addField("Status", message.author.presence.status)
             .addField("Avatar link", message.author.displayAvatarURL)
             .setThumbnail(message.author.avatarURL)
@@ -112,10 +113,13 @@ bot.on("message", async message => {
         message.channel.send("I have been up for " + uptimeM + " minutes and " + uptimeS + " seconds!");
     }
 
-    //INVITE LINK
+    //BOT INVITE LINK
     if (command == `${prefix}invite`) {
         let invite = await bot.generateInvite(["ADMINISTRATOR"]);
-        message.channel.send(invite);
+
+        tinyurl.shorten(invite, function(res) {
+            message.channel.send(res);
+        });
     }
 
     //Message replies
