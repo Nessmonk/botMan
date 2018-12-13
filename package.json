@@ -12,6 +12,7 @@
     "discord.js": "^11.4.2",
     "discord.js-commando": "~0.9.0",
     "google-url": "0.0.4",
+    "log4js": "^3.0.6",
     "node-url-shortener": "^1.0.1",
     "nodemon": "~1.18.4",
     "tinyurl": "^1.1.2"

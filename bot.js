@@ -12,9 +12,17 @@ let color = require('./commands/randomColor');
 let upTime = require('./commands/uptime');
 let replies = require('./commands/replies')
 let logging = require('./app/logging');
+
 const bot = new Discord.Client({
     disableEveryone: true
 });
+
+const log4js = require('log4js');
+log4js.configure({
+  appenders: { log: { type: 'file', filename: './app/logfile.log' } },
+  categories: { default: { appenders: ['log'], level: 'info' } }
+});
+const logger = log4js.getLogger('log');
 
 start(bot);
 
@@ -36,15 +44,15 @@ bot.on("message", async message => {
     }
 
     if (command == `${prefix}8ball`) {
-        eightBall(message);
+        eightBall(message, logger);
     }
 
     if (command == `${prefix}flip`) {
-        flip(message);
+        flip(message, logger);
     }
 
     if (command == `${prefix}dice`) {
-        diceRoll(message);
+        diceRoll(message, logger);
     }
 
     if (command == `${prefix}color`) {
@@ -52,7 +60,7 @@ bot.on("message", async message => {
     }
 
     if (command == `${prefix}uptime`) {
-        upTime(bot, message);
+        upTime(bot, message, logger);
     }
 
     if (command == `${prefix}invite`) {

@@ -1,4 +1,4 @@
-function flip(message) {
+function flip(message, logger) {
     var flipNumber = Math.floor(Math.random() * 2);
     var result = '';
     switch(flipNumber) {
@@ -9,7 +9,7 @@ function flip(message) {
             result = 'Tails';
             break;
     }   
-    console.log(result + " has been flipped.")
+    logger.info(result + " has been flipped.")
 
     message.reply(result)
 }

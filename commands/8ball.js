@@ -1,4 +1,4 @@
-function eightBall(message) {
+function eightBall(message, logger) {
     var randomNumber = Math.floor(Math.random() * 8);
     var answer = '';
     switch (randomNumber) {
@@ -27,7 +27,7 @@ function eightBall(message) {
             answer = 'Better not tell you now.';
             break;
     }
-    console.log('The eight ball answered: ' + answer);
+    logger.info('The eight ball answered: ' + answer);
     message.reply('The eight ball answered: ' + answer);
 }
 
