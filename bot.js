@@ -24,7 +24,7 @@ log4js.configure({
 });
 const logger = log4js.getLogger('log');
 
-start(bot);
+start(bot, logger);
 
 bot.on("message", async message => {
     if (message.author.bot) return;
@@ -74,6 +74,6 @@ bot.on("message", async message => {
 
 replies(bot);
 
-logging(bot);
+logging(bot, logger);
   
 bot.login(config.token);
