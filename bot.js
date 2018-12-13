@@ -63,7 +63,7 @@ bot.on("message", async message => {
 
     //UPTIME
     if (command == `${prefix}uptime`) {
-        upTime(bot,message);
+        upTime(bot, message);
     }
 
     //BOT INVITE LINK
