@@ -3,12 +3,15 @@
 ## Simple bot made by Nessmonk#7550
 Created with Node.JS with Discord.Js, Nodemon and Discord commando.
 Base prefix is ">", you can change that by going into config.json and changing the prefix to anything you want.
-Most commands speak for themselves. Still going to add comments to code for readability.
+Most commands speak for themselves.
 
 ## Getting the bot running locally.
 
- - git clone the repository.
- - Go to the directory in your terminal.
+ - Download [Node.js](https://nodejs.org/en/)
+ - Clone the repository. 
+   With SSH: `git clone git@github.com:Nessmonk/botMan.git`.
+   With HTTPS: `git clone https://github.com/Nessmonk/botMan.git`
+ - Go to the directory in your terminal. `cd botMan`
  - Type `npm install` in your terminal.
  - Create a file called `config.json` in the root directory of the bot.
  - Make a json object array in the `config.json` file with the values "token" and "prefix".
