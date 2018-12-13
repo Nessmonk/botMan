@@ -20,3 +20,14 @@ Most commands speak for themselves. Still going to add comments to code for read
 >uptime: Checks the uptime of the bot
 
 >invite: Creates an invite for the bot, could be shortened with goo.gl or bit.ly but cba to get an API key so I can do that.
+
+## Config.json
+
+Create a file called `config.json` and make a json object array in it with the values "token" and "prefix".
+It should look something like this:
+```
+{
+    "token": "YourTokenHere",
+    "prefix": "YourPrefixHere"
+}
+```
