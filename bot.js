@@ -18,10 +18,6 @@ const bot = new Discord.Client({
 
 start(bot);
 
-/**
- * Bot Commands
- */
-
 bot.on("message", async message => {
     if (message.author.bot) return;
 
@@ -31,42 +27,34 @@ bot.on("message", async message => {
 
     if (!command.startsWith(prefix)) return;
 
-    //HELP
     if (command == `${prefix}help`) {
         help(config, message, Discord)
     }
 
-    //INFO
     if (command == `${prefix}info`) {
         info(message, Discord);
     }
 
-    //8BALL
     if (command == `${prefix}8ball`) {
         eightBall(message);
     }
 
-    //COINFLIP
     if (command == `${prefix}flip`) {
         flip(message);
     }
 
-    //DICE
     if (command == `${prefix}dice`) {
         diceRoll(message);
     }
 
-    //RANDOM COLOR
     if (command == `${prefix}color`) {
         message.reply("https://via.placeholder.com/100/" + color.colorUrl());
     }
 
-    //UPTIME
     if (command == `${prefix}uptime`) {
         upTime(bot, message);
     }
 
-    //BOT INVITE LINK
     if (command == `${prefix}invite`) {
         let invite = await bot.generateInvite(["ADMINISTRATOR"]);
 
