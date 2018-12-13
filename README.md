@@ -34,16 +34,16 @@ Most commands speak for themselves. Still going to add comments to code for read
 
 ## Commands
 
->help: Simple help command showing all available commands (manually added, no algorithm for whenever I add a command yet.)
+>help: Simple help command showing all available commands.
 
->info: Shows you simple information about yourself (Username, Nickname, Status etc)
+>info: Shows you simple information about yourself (Username, Nickname, Status etc).
 
->8ball: Rolls the 8ball with a switch with 8 different answers.
+>8ball: Rolls the 8ball.
 
->flip: Flips a coin with Math.Random 
+>flip: Flips a coin.
 
->color: Creates a random hex code and adds that to a link so it displays the random color
+>color: Generates a random hex code and adds that to a link so it displays a random color.
 
->uptime: Checks the uptime of the bot
+>uptime: Checks the uptime of the bot.
 
->invite: Creates an invite for the bot, could be shortened with goo.gl or bit.ly but cba to get an API key so I can do that.
+>invite: Creates an invite for the bot, shortened with tinyurl.
