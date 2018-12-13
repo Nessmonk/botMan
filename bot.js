@@ -8,7 +8,7 @@ let info = require('./commands/info');
 let eightBall = require('./commands/8ball');
 let flip = require('./commands/Flip');
 let diceRoll = require('./commands/dice');
-let color = require('./commands/randomColor');
+let colorUrl = require('./commands/colorUrl')
 let upTime = require('./commands/uptime');
 let replies = require('./commands/replies')
 let logging = require('./app/logging');
@@ -56,7 +56,7 @@ bot.on("message", async message => {
     }
 
     if (command == `${prefix}color`) {
-        message.reply("https://via.placeholder.com/100/" + color.colorUrl());
+        colorUrl(message, logger);
     }
 
     if (command == `${prefix}uptime`) {

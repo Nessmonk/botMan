@@ -1,10 +1,10 @@
-let color = require('./randomColor');
+let rColor = require('./randomColor');
 
 function info(message, Discord) {
     let ca = message.author.createdAt;
 
     let embed = new Discord.RichEmbed()
-        .setColor(color.randomColor())
+        .setColor(rColor.randomColor())
         .setAuthor(message.author.username + "#" + message.author.discriminator, message.author.avatarURL)
         .addField("Username", message.author.username, true)
         .addField("Registered", ca.toDateString(), true)
