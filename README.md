@@ -24,7 +24,7 @@ Most commands speak for themselves.
 }
 ```
  
- - Type `nodemon` in your terminal.
+ - Type `node bot.js` in your terminal.
  - Congratulations, your bot is now running, don't forget to invite it to your server.
 
 ## Token
