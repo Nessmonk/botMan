@@ -1,5 +1,6 @@
 const config = require("./config.json");
 const Discord = require('discord.js');
+const fs = require('fs');
 const prefix = config.prefix;
 let tinyurl = require('tinyurl');
 let start = require('./app/start');
@@ -8,9 +9,10 @@ let info = require('./commands/info');
 let eightBall = require('./commands/8ball');
 let flip = require('./commands/Flip');
 let diceRoll = require('./commands/dice');
-let colorUrl = require('./commands/colorUrl')
+let colorUrl = require('./commands/colorUrl');
 let upTime = require('./commands/uptime');
-let replies = require('./commands/replies')
+let callLog = require('./commands/callLog');
+let replies = require('./commands/replies');
 let logging = require('./app/logging');
 
 const bot = new Discord.Client({
@@ -61,6 +63,10 @@ bot.on("message", async message => {
 
     if (command == `${prefix}uptime`) {
         upTime(bot, message, logger);
+    }
+
+    if (command == `${prefix}log`) {
+        callLog(fs, message, logger);
     }
 
     if (command == `${prefix}invite`) {

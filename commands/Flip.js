@@ -9,7 +9,7 @@ function flip(message, logger) {
             result = 'Tails';
             break;
     }   
-    logger.info(result + " has been flipped.")
+    logger.info(result + " has been flipped in " + message.guild.name)
 
     message.reply(result)
 }
