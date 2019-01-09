@@ -1,6 +1,6 @@
 const config = require("./config.json");
 const Discord = require('discord.js');
-const fs = require('fs');
+const readLastLines = require('read-last-lines');
 const prefix = config.prefix;
 let tinyurl = require('tinyurl');
 let start = require('./app/start');
@@ -66,7 +66,7 @@ bot.on("message", async message => {
     }
 
     if (command == `${prefix}log`) {
-        callLog(fs, message, logger);
+        callLog(message, logger, readLastLines);
     }
 
     if (command == `${prefix}invite`) {

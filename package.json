@@ -15,6 +15,7 @@
     "log4js": "^3.0.6",
     "node-url-shortener": "^1.0.1",
     "nodemon": "~1.18.4",
+    "read-last-lines": "^1.6.0",
     "tinyurl": "^1.1.2"
   },
   "repository": {
